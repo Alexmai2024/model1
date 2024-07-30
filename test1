@@ -1,0 +1,43 @@
+get_fractions <- function(m, n) {
+  ret<-NULL
+  ret1<-NULL
+  for ( i in 0:m ) {
+    ret<-c(ret,i/m)     }
+  for ( i in 0:n ) {
+    ret1<-c(ret1,i/n)   }
+  return (sort(unique( c(ret,ret1) ),decreasing = TRUE))get_fractions(3,7)
+m<-3
+n<-7
+
+ret<-NULL
+ret1<-NULL
+
+for ( i in 0:m ) {
+  ret<-c(ret,i/m)     }
+for ( j in 0:n ) {
+  ret1<-c(ret1,j/n)   }
+
+x<-c(1, 23, 5, 19, 15, 13, 5)
+ret<-LETTERS[x]
+ret
+
+x<-c(0, 0, 3, 4, 4, 8,6)
+x<-c(3:0,1)
+is_monotone <- function(x) {
+  ret<-ifelse ( all(x[-length(x)]>=x[-1]) | all(x[-length(x)]<=x[-1]),TRUE,FALSE)   
+  print(ret) 
+}
+
+
+is_monotone(x)
+x1<-x[-1]
+x
+all(x1 -x <=0 )
+
+all(x[-length(x)]>=x[-1])
+
+n<-6
+k<-3
+
+repit<-factorial(n+k-1)/(factorial(k)*factorial(n-1))
+no_repit<-choose(n,k)
